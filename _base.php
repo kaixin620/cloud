@@ -423,10 +423,25 @@ function checklogin()
 // Database Setups and Functions
 // ============================================================================
 
-$host = 'assm-db.czi26mueg446.us-east-1.rds.amazonaws.com'; //RDS endpoint
-$dbname = 'studentrecord'; //RDS DB name
-$username = 'admin'; //RDS username
-$password = 'abcd1234'; //RDS password
+// $host = 'assm-db.czi26mueg446.us-east-1.rds.amazonaws.com'; //RDS endpoint
+// $dbname = 'studentrecord'; //RDS DB name
+// $username = 'admin'; //RDS username
+// $password = 'abcd1234'; //RDS password
+
+require 'get_secrets.php';
+$creds = getDbCredentials('MyAssmDB'); // name of the secret in AWS Secrets Manager
+
+$host = $creds['host'];
+$username = $creds['username'];
+$password = $creds['password'];
+$dbname = $creds['dbname'];
+$port = $creds['port'];
+
+$conn = new mysqli($host, $username, $password, $dbname, $port);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 
 // Global PDO object
 try {
