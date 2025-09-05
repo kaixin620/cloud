@@ -484,6 +484,26 @@ function alert_msg($msg, $url = null)
     echo "<script>alert('$msg');" . ($url != null ? "window.location.href='$url';" : "") . "</script>";
 }
 
+// Sweet Alert Message just for some type of message except confirm message
+function sweet_alert_msg($msg, $type = 'success', $url = null, $replace = false)
+{
+    echo "<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Swal.fire({
+            text: '$msg',
+            icon: '$type',
+            showConfirmButton: true,
+        }).then(() => {
+            " . ($url
+        ? ($replace
+            ? "window.location.replace('$url');"
+            : "window.location.href='$url';")
+        : "") . "
+        });
+    });
+    </script>";
+}
+
 function alert_msg_refresh($msg, $url = null)
 {
     $url ??= $_SERVER['PHP_SELF'];
@@ -737,4 +757,3 @@ function generate_password($length = 8)
 
     return $str;
 }
-
