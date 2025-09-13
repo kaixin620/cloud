@@ -28,7 +28,7 @@ $s3Client = new S3Client([
 ]);
 
 // Bucket name in S3
-$bucketName = 'assm-student-web-bucket';
+$bucketName = 'assm-student-images';
 
 ?>
 
