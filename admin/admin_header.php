@@ -49,7 +49,7 @@ if (empty($admin)) {
                     <div class="admin-profile">
                         <div class="profile d-flex-center" data-get="admin_profile.php">
                             <div class="admin-pic pointer-event-none">
-                            <img src="../profilePic/<?= $admin?->proPic ?>" alt="" class="admin-pic">
+                            <img src="https://assm-student-images.s3.amazonaws.com/user-images/<?= $admin?->proPic ?>" alt="" class="admin-pic">
                         </div>
                         <div class="admin-name pointer-event-none"><?= $admin?->uname ?></div>
                         </div>
