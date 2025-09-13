@@ -11,7 +11,7 @@ if (isset($_SESSION['admin_id'])) {
 
 // check admin login
 if (empty($admin)) {
-    alert_msg('Login Required!', 'admin_login.php');
+    sweet_alert_msg('Login Required!', 'error','admin_login.php', true);
     session_destroy();
 }
 ?>

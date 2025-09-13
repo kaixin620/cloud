@@ -2,6 +2,7 @@
 require_once '../_base.php';
 ?>
 <script src="../js/app.js"></script>
+
 <tr class="table-header-row">
     <td class="w-5"></td>
     <td class="w-10">No</td>
@@ -53,7 +54,7 @@ if ($studList->rowCount() > 0):
             <td><?= $s->studPhone ?></td>
             <td>
                 <div class="ind-action-btn w-100">
-                     <button class="blue-btn" onclick="window.location.href='edit_student.php?id=<?= $s->studid ?>'" style='width:100%'>Edit</button>
+                    <button class="blue-btn" onclick="window.location.href='edit_student.php?id=<?= $s->studid ?>'" style='width:100%'>Edit</button>
                 </div>
             </td>
         </tr>
