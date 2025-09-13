@@ -65,7 +65,7 @@ $bucketName = 'assm-student-images';
                     <div class="admin-profile">
                         <div class="profile d-flex-center" data-get="admin_profile.php">
                             <div class="admin-pic pointer-event-none">
-                            <img src="<?= !empty($admin->proPic) ? 'https://' . $bucketName . '.s3.amazonaws.com/user-images/' . $admin->proPic : '../profilePic/profile.png' ?>">
+                            <img src="<?= !empty($admin->proPic) ? 'https://' . $bucketName . '.s3.amazonaws.com/user-images/' . $admin->proPic : '../profilePic/profile.png' ?>" alt="" class="admin-pic">
                         </div>
                         <div class="admin-name pointer-event-none"><?= $admin?->uname ?></div>
                         </div>
