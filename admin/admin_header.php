@@ -43,7 +43,7 @@ if (empty($admin)) {
         <div class="sidebar">
             <div class="sidebar-content">
                 <div class="logo" data-get="admin_homepage.php">
-                    <p style="font-family: serif; font-size: 25px; font-weight: bold; font-style: italic; text-transform: uppercase; letter-spacing: 2px; line-height: 1.5;">Example University</p>
+                    <p style="font-family: serif; font-size: 25px; font-weight: bold; font-style: italic; text-transform: uppercase; letter-spacing: 2px; line-height: 1.5;">EastBridge University</p>
                 </div>
                 <div class="menu-list">
                     <div class="admin-profile">
